@@ -85,11 +85,10 @@ def predict_home_price():
     })
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
-
+load_saved_artifacts()
 # ================== Run Server ==================
 
 if __name__ == "__main__":
     print("Starting Python Flask Server For Home Price Prediction...")
-    load_saved_artifacts()
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
 
